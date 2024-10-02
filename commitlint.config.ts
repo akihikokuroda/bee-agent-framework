@@ -7,6 +7,21 @@ const Configuration: UserConfig = {
       return commit.includes("<support@github.com>") && commit.includes("dependabot");
     },
   ],
+  rules: {
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "code-interpreter",
+	"tools",
+	"llms",
+	"adapters",
+	"serializer",
+	"memory",
+	"cache",
+      ],
+    ],
+  },
 };
 
 export default Configuration;
